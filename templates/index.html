@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hearth flask</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="container">
+<h1>Hearth Flask</h1>
+<hr>
+
+<table class="table sortable table-bordered table-hover table-striped">
+<tr>
+    <th>Name</th>
+    <th>Set</th>
+    <th>Card Type</th>
+</tr>
+
+    {% for card in cards %}
+<tr>
+    <td>{{card.name}}</td>
+    <td>{{card.cardSet}}</td>
+    <td>{{card.type}}</td>
+</tr>
+    {% endfor %}
+<tfoot>
+<tr>
+    <td>Name</td>
+    <td>Set</td>
+    <td>Card Type</td>
+</tr>
+</tfoot>
+</table>
+</div>
+<script src="static/sorttable.js"></script>
+</body>
+</html>
